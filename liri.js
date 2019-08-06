@@ -65,3 +65,30 @@ function concertThis(){
             console.log(error.config);
         })
 }
+
+function spotifyThisSong(){
+
+    var song = process.argv[3];
+    var spotify = new Spotify({
+        id: '3858b2305f2c48b98503f27b6a8df8a2',        
+        secret: 'eb2a7692f37c45c9b0b6fbf3e778fd42'
+    });
+    
+
+    if(song){
+
+        spotify.search({ type: 'track', query: song }, function(err, data) {
+
+            if (err) {
+
+            return console.log('Error occurred: ' + err);
+
+            }
+        
+        console.log(`Artist: ${data.tracks.items[0].artists[0].name}`);
+        console.log(`Song: ${data.tracks.items[0].name}`); 
+        console.log(`Album Name: ${data.tracks.items[0].album.name}`);
+        console.log(`Preview Song: ${data.tracks.items[0].preview_url}`);
+        
+        });
+    }
