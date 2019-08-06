@@ -92,3 +92,27 @@ function spotifyThisSong(){
         
         });
     }
+    else{
+
+        spotify.search({ type: 'track', query: 'The Sign' }, function(err, data) {
+
+            if (err) {
+
+              return console.log('Error occurred: ' + err);
+
+            }
+
+            for(let i = 0; i < data.tracks.items.length; i++){
+                
+                if(data.tracks.items[i].name === 'The Sign'){
+                
+                    console.log(`Artist: ${data.tracks.items[i].artists[0].name}`);
+                    console.log(`Song: ${data.tracks.items[i].name}`); 
+                    console.log(`Album Name: ${data.tracks.items[i].album.name}`);
+                    console.log(`Preview Song: ${data.tracks.items[i].preview_url}`);
+
+                }
+            }
+          });
+    }
+}
