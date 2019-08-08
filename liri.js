@@ -67,7 +67,7 @@ function spotifyThisSong(search){
             if (err) {
 
                 return console.log('Error occurred: ' + err);
-                
+
             }
         
             console.log(`Artist: ${data.tracks.items[0].artists[0].name}`);
@@ -105,31 +105,19 @@ function movieThis(search){
 
     if(search){
         axios.get(queryURL)
-            .then(function(response){
+        .then(function(response){
                 
-                console.log(`Movie Title: ${response.data.Title}`);
-                console.log(`Year: ${response.data.Year}`);
-                console.log(`imdb Rating: ${response.data.imdbRating}`);
-                console.log(`Country: ${response.data.Country}`);
-                console.log(`Language: ${response.data.Language}`);
-                console.log(`Plot: ${response.data.Plot}`);
-                console.log(`Actors: ${response.data.Actors}`);
+            console.log(`Movie Title: ${response.data.Title}`);
+            console.log(`Year: ${response.data.Year}`);
+            console.log(`imdb Rating: ${response.data.imdbRating}`);
+            console.log(`Country: ${response.data.Country}`);
+            console.log(`Language: ${response.data.Language}`);
+            console.log(`Plot: ${response.data.Plot}`);
+            console.log(`Actors: ${response.data.Actors}`);
+            console.log('---------------------------------------');
 
-            })
-            .catch(function(error){
-                if(error.response) {
-                    console.log(error.response.data);
-                    console.log(error.response.status);
-                    console.log(error.response.headers);
-                } else if (error.request) {
-                    console.log(error.request);
-                }else {
-                    console.log('Error', error.message);
-                }
-                console.log(error.config);
-            })
-    }
-    
+        })
+    }    
 }
 
 function doWhatItSays(){
