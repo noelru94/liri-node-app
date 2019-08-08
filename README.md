@@ -12,6 +12,7 @@ Through the cli, the user inputs 1 of 4 commands ...
 * `do-what-it-says`
 
 * Using switch statement, a function pertaining to the command will be envoked.
+ ![example](/assets/images/switch.jpg)
 
 * Each entry is logged to a txt file to look at search history.
 
