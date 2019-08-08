@@ -63,11 +63,8 @@ function spotifyThisSong(search){
     if(search){
 
         spotify.search({ type: 'track', query: search }, function(err, data) {
-
             if (err) {
-
                 return console.log('Error occurred: ' + err);
-
             }
         
             console.log(`Artist: ${data.tracks.items[0].artists[0].name}`);
@@ -114,26 +111,20 @@ function movieThis(search){
             console.log(`Language: ${response.data.Language}`);
             console.log(`Plot: ${response.data.Plot}`);
             console.log(`Actors: ${response.data.Actors}`);
-            console.log('---------------------------------------');
+            console.log('--------------------------------------')
 
         })
-    }    
+    }   
 }
 
 function doWhatItSays(){
-    fs.readFile('random.txt','utf8',function(error,data){
+    fs.readFile('./assets/txt/random.txt','utf8',function(error,data){
        if(error) throw error;
-
-       console.log(data);
 
        var dataArray = data.split(',');
        var command =  dataArray[0];
        var query   =  dataArray[1];
-
-       console.log(command);
-       console.log(query);
        
-
       switch(command){
         case 'spotify-this-song':
         spotifyThisSong(query);
@@ -148,5 +139,5 @@ function doWhatItSays(){
         break;
         
       }
-});
+    });
 }

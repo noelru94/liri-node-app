@@ -62,9 +62,10 @@ Through the cli, the user inputs 1 of 4 commands ...
     * Country:
     * Language:
     * Plot:
+    ![example](/assets/images/movie-this.jpg)
 * If `<movie name>` is left blank, it will default to Mr.Nobody.
+    
 
-![example](/assets/images/movie-this.jpg)
 
 
 ### do-what-it-says
@@ -72,6 +73,7 @@ Through the cli, the user inputs 1 of 4 commands ...
 `node liri.js do-what-it-says`
 
 * Reads `random.txt` and runs the command aswell as the search term
+![example](/assets/images/what-it-says.jpg)
 
 
 ## log.txt
