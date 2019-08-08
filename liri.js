@@ -5,13 +5,13 @@ var Keys    = require('./keys');
 var moment  = require('moment');
 var Spotify = require('node-spotify-api');
 
-console.log(Keys.spotify.id);
 var input = process.argv[2];
 
 fs.appendFile('log.txt',`, ${input}: "${process.argv[3]}"`,function(error){
     if(error) throw error;
-
-    console.log('action logged');
+    console.log('-------------------');
+    console.log('search logged');
+    console.log('-------------------')
 })
 
 switch(input){
@@ -40,7 +40,6 @@ function concertThis(search){
 
     axios.get(queryURL) 
         .then(function(response){
-            console.log(response.data[0]);
             var eventsArray = response.data;
 
             for(let i = 0; i < eventsArray.length; i++){
