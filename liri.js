@@ -5,7 +5,14 @@ var Keys    = require('./keys');
 var moment  = require('moment');
 var Spotify = require('node-spotify-api');
 
+console.log(Keys.spotify.id);
 var input = process.argv[2];
+
+fs.appendFile('log.txt',` ${input}: "${process.argv[3]}",${'<br>'}`,function(error){
+    if(error) throw error;
+
+    console.log('action logged');
+})
 
 switch(input){
 
@@ -65,10 +72,7 @@ function concertThis(search){
 
 function spotifyThisSong(search){
 
-    var spotify = new Spotify({
-        id: '3858b2305f2c48b98503f27b6a8df8a2',        
-        secret: 'eb2a7692f37c45c9b0b6fbf3e778fd42'
-    });
+    var spotify = new Spotify(Keys.spotify);
     
     if(search){
 
