@@ -10,10 +10,11 @@ Using node.js, through the cli, the user inputs 1 of 4 commands ...
 ## concert-this
 * Using axios the client makes a GET request to the "bands in town api"
 * If the request is successful the client recieves information about the event
-- Artist 
-- Venue Name
-- Venue Location
-- Event Date
+    * Artist 
+    * Venue Name
+    * Venue Location
+    * Event Date
+    
 ![example](/assets/images/concert-this.jpg)
-Format: ![Alt text](url)
+
 
