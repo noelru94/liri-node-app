@@ -10,7 +10,7 @@ var input = process.argv[2];
 fs.appendFile('log.txt',`, ${input}: "${process.argv[3]}"`,function(error){
     if(error) throw error;
     console.log('-------------------');
-    console.log('search logged');
+    console.log('log.txt updated');
     console.log('-------------------')
 })
 
