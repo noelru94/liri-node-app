@@ -46,7 +46,7 @@ Through the cli, the user inputs 1 of 4 commands ...
     * Preview Song URL:
 * If `<song name>` is left blank. It will default to  "The Sign" by the Ace of Base.
 
-![example](/assets/images/spotify-this.jpg)
+![example](/assets/images/spotify.jpg)
 
 
 

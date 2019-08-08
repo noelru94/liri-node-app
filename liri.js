@@ -58,7 +58,6 @@ function concertThis(search){
 }
 
 function spotifyThisSong(search){
-
     var spotify = new Spotify(Keys.spotify);
     
     if(search){
@@ -67,25 +66,22 @@ function spotifyThisSong(search){
 
             if (err) {
 
-            return console.log('Error occurred: ' + err);
-
+                return console.log('Error occurred: ' + err);
+                
             }
         
-        console.log(`Artist: ${data.tracks.items[0].artists[0].name}`);
-        console.log(`Song: ${data.tracks.items[0].name}`); 
-        console.log(`Album Name: ${data.tracks.items[0].album.name}`);
-        console.log(`Preview Song: ${data.tracks.items[0].preview_url}`);
-        
+            console.log(`Artist: ${data.tracks.items[0].artists[0].name}`);
+            console.log(`Song: ${data.tracks.items[0].name}`); 
+            console.log(`Album Name: ${data.tracks.items[0].album.name}`);
+            console.log(`Preview Song: ${data.tracks.items[0].preview_url}`);
+            
         });
     }
     else{
 
         spotify.search({ type: 'track', query: 'The Sign' }, function(err, data) {
-
             if (err) {
-
               return console.log('Error occurred: ' + err);
-
             }
 
             for(let i = 0; i < data.tracks.items.length; i++){
@@ -99,7 +95,7 @@ function spotifyThisSong(search){
 
                 }
             }
-          });
+        });
     }
 }
 
