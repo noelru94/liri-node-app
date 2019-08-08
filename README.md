@@ -26,7 +26,7 @@ Through the cli, the user inputs 1 of 4 commands ...
 
 ## spotify-this-song
 
-`node liri.js concert-this <artist/band name>`
+`node liri.js concert-this <song name>`
 
 * Using the "node-spotify-api", we make a request to the spotify api.
 * If the request is successfull the client recieves information about the song.
@@ -34,5 +34,8 @@ Through the cli, the user inputs 1 of 4 commands ...
     * Song:
     * Album:
     * Preview Song URL:
+* default `<song name>` is "The Sign" by the Ace of Base.
+
+![example](/assets/images/spotify-this.jpg)
 
 
