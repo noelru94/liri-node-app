@@ -66,7 +66,7 @@ Through the cli, the user inputs 1 of 4 commands ...
 ![example](/assets/images/movie-this.jpg)
 
 
-###do-what-it-says
+### do-what-it-says
 
 `node liri.js do-what-it-says`
 
