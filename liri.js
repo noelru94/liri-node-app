@@ -8,7 +8,7 @@ var Spotify = require('node-spotify-api');
 console.log(Keys.spotify.id);
 var input = process.argv[2];
 
-fs.appendFile('log.txt',` ${input}: "${process.argv[3]}",${'<br>'}`,function(error){
+fs.appendFile('log.txt',`, ${input}: "${process.argv[3]}"`,function(error){
     if(error) throw error;
 
     console.log('action logged');
